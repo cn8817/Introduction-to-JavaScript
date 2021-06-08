@@ -19,8 +19,8 @@ Do the following:
 */
 let votingAge = 18;
 if(votingAge >= 18){
-  console.log("true");
 }
+console.log("true");
 
 
 /*
@@ -37,8 +37,8 @@ let one = 1;
 let two = 2;
 if(two === 2){
   one = 3;
-  console.log(one);
 }
+console.log(one);
 
 
 
@@ -83,9 +83,10 @@ Do the following:
    2. Use the received value to calculate the age in dog years (1 human year is equal to 7 dog years)
    3. Return the newly calculated age
 */
+let humanYears = 17;
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(humanYears){
+  return humanYears*7;
 }
 
 
@@ -164,9 +165,38 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
-
+//<= o.333 is rock
+// >0.33 <=0.66 is paper
+let computer = Math.random();
 function game(user, computer){
-    /*add your code here*/
+    if(computer === "rock" && user === "paper"){
+      return "you win!";
+    }
+    else if(computer === "paper" && user === "paper"){
+      return "it's a tie";
+    }
+    else if(computer === "scissors" && user === "paper"){
+      return "you lose!";
+    }
+    else if(computer === "rock" && user === "rock"){
+      return "it's a tie";
+    }
+    else if(computer === "paper" && user === "rock"){
+      return "you lose!";
+    }
+    else if(computer === "scissors" && user === "rock"){
+      return "you win!";
+    }
+    else if(computer === "rock" && user === "scissors"){
+      return "you lose!";
+    }
+    else if(computer === "paper" && user === "scissors"){
+      return "you win!";
+    }
+    else if(computer === "scissors" && user === "scissors"){
+      return "it's a tie";
+    }
+    
 }
   
   
@@ -182,8 +212,8 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(km){
+    return km*0.621371;
   }
 
 
@@ -196,8 +226,8 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+    return cm/30.48;
   }
  
 
@@ -211,10 +241,10 @@ Using the annoyingSong function below do the following:
   2. At each invocation, it should RETURN this string (note: the tests are expecting the same string as below):
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
-
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
-  }
+let number = 5;
+function annoyingSong(number){
+return number + " bottles of soda on the wall, " + number + " bottles of soda, take one down pass it around " + (number - 1) + " bottles of soda on the wall";
+}
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -232,8 +262,23 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(score){
+  if(score>=90 && score<=100){
+    return "you got an A";
+  }
+  else if(score>=80 && score<=89){
+    return "you got a B";
+  }
+  else if(score>=70 && score<=79){
+    return "you got a C";
+  }
+  else if(score>=60 && score<=69){
+    return "you got a D";
+  }
+  else if(score<60){
+    return "you got an F";
+  }
+  
   }
   
   
